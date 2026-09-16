@@ -2,28 +2,90 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shabananafeesa | Senior SEO Strategy for GCC Businesses</title>
-<meta name="description" content="Senior SEO strategy for ambitious businesses across the UAE and Saudi Arabia — technical SEO, content architecture, and AI search visibility.">
+<title>Shabananafeesa | SEO Consultant in India for International Clients</title>
+<meta name="description" content="SEO consultant based in India, working with businesses across the UAE, Saudi Arabia, and worldwide. Technical SEO, content strategy, and AI search visibility.">
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
-  header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
-  nav a { margin-right: 20px; text-decoration: none; color: #0066cc; }
-  h1 { color: #111; margin-bottom: 4px; }
-  .tagline { color: #555; font-size: 15px; margin-top: 0; }
-  .hero { background: #f7f9fb; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
-  .hero h2 { margin-top: 0; }
-  .cta { display: inline-block; margin-top: 15px; background: #0066cc; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 8px; }
-  footer { margin-top: 60px; color: #888; font-size: 14px; }
+:root {
+  --bg: #0b0e17;
+  --bg-card: #131826;
+  --bg-card-alt: #161c2d;
+  --border: #232a3d;
+  --text: #eef0f5;
+  --muted: #9aa3b5;
+  --accent: #6c7bff;
+  --accent2: #8a5cff;
+  --pill-bg: #1c2438;
+  --pill-text: #9db4ff;
+  --green: #34d399;
+  --amber: #f5b942;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  max-width: 900px; margin: 0 auto; padding: 44px 24px 90px;
+  background: radial-gradient(circle at top, #10152400 0%, var(--bg) 60%), var(--bg);
+  color: var(--text); line-height: 1.65;
+}
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 22px; margin-bottom: 44px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo-badge { width: 38px; height: 38px; border-radius: 11px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: #fff; flex-shrink: 0; }
+.brand h1 { font-size: 18px; margin: 0; }
+.brand .tag { color: var(--muted); font-size: 12.5px; margin-top: 1px; }
+nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-size: 14px; }
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a.active { color: var(--text); }
+
+.eyebrow-pill { display: inline-block; background: var(--pill-bg); color: var(--pill-text); font-size: 12.5px; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; letter-spacing: 0.3px; }
+.hero h2 { font-size: 36px; line-height: 1.22; margin: 0 0 18px; letter-spacing: -0.6px; max-width: 680px; }
+.hero p { color: var(--muted); font-size: 16.5px; max-width: 620px; }
+.cta { display: inline-block; margin-top: 24px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 600; padding: 13px 28px; border-radius: 9px; text-decoration: none; font-size: 15px; }
+.cta:hover { opacity: 0.92; }
+
+.section-title { display: flex; align-items: center; gap: 10px; margin: 60px 0 4px; }
+.section-title .dot { width: 26px; height: 26px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.section-title h3 { font-size: 21px; margin: 0; letter-spacing: -0.3px; }
+.section-sub { color: var(--muted); font-size: 14.5px; margin: 6px 0 24px; }
+
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.icon-badge { width: 30px; height: 30px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; color: #fff; }
+.card h4 { font-size: 14.5px; margin: 0; }
+.card p { color: var(--muted); font-size: 13.5px; margin: 0; }
+
+.highlight-box { margin-top: 14px; border: 1px solid var(--border); background: var(--bg-card-alt); border-radius: 10px; padding: 12px 14px; font-size: 13.5px; color: var(--muted); }
+.highlight-box strong { color: var(--green); }
+
+.service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-bottom: 16px; }
+.service-card .card-head { margin-bottom: 12px; }
+.service-card h3 { font-size: 17px; margin: 0; }
+.service-card p.desc { color: var(--muted); font-size: 14.5px; margin: 0 0 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { background: var(--pill-bg); color: var(--pill-text); font-size: 12.5px; padding: 6px 12px; border-radius: 999px; }
+.status { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 12.5px; color: var(--green); }
+
+footer { margin-top: 80px; color: #4d5568; font-size: 13px; border-top: 1px solid var(--border); padding-top: 24px; }
+
+@media (max-width: 640px) {
+  .grid3 { grid-template-columns: 1fr; }
+  .grid2 { grid-template-columns: 1fr; }
+  .hero h2 { font-size: 27px; }
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>Shabananafeesa</h1>
-  <p class="tagline">SEO, GEO & AI Search Consultant</p>
+  <div class="brand">
+    <div class="logo-badge">S</div>
+    <div>
+      <h1>Shabananafeesa</h1>
+      <div class="tag">SEO & GEO Consultant, India</div>
+    </div>
+  </div>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -31,19 +93,76 @@
 </header>
 
 <div class="hero">
-  <h2>SEO that's built for how search actually works today</h2>
-  <p>I help UAE and Saudi Arabia businesses grow organic visibility — across traditional search, local search, and the AI-powered answer engines that are reshaping how customers find companies now.</p>
-  <a class="cta" href="contact.html">Get in touch</a>
+  <span class="eyebrow-pill">Get found. Get chosen. Get growth.</span>
+  <h2>Turning search traffic into real business results.</h2>
+  <p>I'm an SEO consultant based in India, working with businesses across the UAE, Saudi Arabia, and international markets. I focus on growth that shows up in traditional search, local search, and the AI-powered answer engines now shaping how customers find companies.</p>
+  <a class="cta" href="contact.html">Get in touch →</a>
 </div>
 
-<h3>What I Focus On</h3>
-<ul>
-  <li><strong>Technical SEO</strong> — site health, crawlability, and structured data that search engines can actually trust</li>
-  <li><strong>Content Strategy</strong> — topic clusters built around real search demand, not guesswork</li>
-  <li><strong>Google Business Profile & Local SEO</strong> — visibility for multi-location and service-area businesses</li>
-  <li><strong>GEO / AI Search Optimization</strong> — positioning your brand to surface correctly in AI-driven search</li>
-  <li><strong>Performance Marketing</strong> — SEO paired with paid strategy where it makes sense</li>
-</ul>
+<div class="section-title">
+  <div class="dot" style="background:linear-gradient(135deg,#6c7bff,#8a5cff); color:#fff; font-weight:700;">W</div>
+  <h3>Why Work With Me</h3>
+</div>
+<div class="section-sub">Strategy first, execution second. Every recommendation is tied to a business outcome.</div>
+<div class="grid3">
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#3b82f6;">T</div>
+      <h4>Search Engine Trust</h4>
+    </div>
+    <p>Technical foundations that help search engines trust and fully index your site.</p>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#22c55e;">R</div>
+      <h4>Better Rankings</h4>
+    </div>
+    <p>Content and structure built to move rankings, and stay there.</p>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#a855f7;">G</div>
+      <h4>Real Business Results</h4>
+    </div>
+    <p>Visibility that converts into leads, bookings, and revenue, not just traffic.</p>
+  </div>
+</div>
+
+<div class="section-title">
+  <div class="dot" style="background:linear-gradient(135deg,#f59e0b,#ef4444); color:#fff; font-weight:700;">F</div>
+  <h3>What I Focus On</h3>
+</div>
+<div class="section-sub">Core services built around how search actually works today.</div>
+<div class="grid2">
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#3b82f6;">T</div>
+      <h4>Technical SEO</h4>
+    </div>
+    <p>Site health, crawlability, and structured data search engines can trust.</p>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#22c55e;">C</div>
+      <h4>Content Strategy</h4>
+    </div>
+    <p>Topic clusters built around real search demand, not guesswork.</p>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#f59e0b;">L</div>
+      <h4>Google Business Profile & Local SEO</h4>
+    </div>
+    <p>Visibility for multi-location and service-area businesses.</p>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-badge" style="background:#a855f7;">A</div>
+      <h4>GEO / AI Search Optimization</h4>
+    </div>
+    <p>Positioning your brand to surface correctly in AI-driven search.</p>
+  </div>
+</div>
 
 <footer>
   &copy; 2026 Shabananafeesa. This is a placeholder/dummy site for testing purposes only.
