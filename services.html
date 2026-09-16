@@ -3,49 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <title>Services | Shabananafeesa</title>
-<meta name="description" content="Technical SEO, content strategy, Google Business Profile optimization, and GEO/AI search services for GCC businesses.">
+<meta name="description" content="Technical SEO, content strategy, Google Business Profile optimization, and GEO/AI search services for international clients.">
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
-  header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
-  nav a { margin-right: 20px; text-decoration: none; color: #0066cc; }
-  h1 { margin-bottom: 4px; }
-  .service { margin-bottom: 22px; padding: 18px 20px; background: #f7f9fb; border-radius: 6px; border-left: 3px solid #0066cc; }
-  .service h3 { margin-top: 0; margin-bottom: 6px; }
-  footer { margin-top: 60px; color: #888; font-size: 14px; }
+:root {
+  --bg: #0b0e17;
+  --bg-card: #131826;
+  --bg-card-alt: #161c2d;
+  --border: #232a3d;
+  --text: #eef0f5;
+  --muted: #9aa3b5;
+  --accent: #6c7bff;
+  --accent2: #8a5cff;
+  --pill-bg: #1c2438;
+  --pill-text: #9db4ff;
+  --green: #34d399;
+  --amber: #f5b942;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  max-width: 900px; margin: 0 auto; padding: 44px 24px 90px;
+  background: radial-gradient(circle at top, #10152400 0%, var(--bg) 60%), var(--bg);
+  color: var(--text); line-height: 1.65;
+}
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 22px; margin-bottom: 44px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo-badge { width: 38px; height: 38px; border-radius: 11px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: #fff; flex-shrink: 0; }
+.brand h1 { font-size: 18px; margin: 0; }
+.brand .tag { color: var(--muted); font-size: 12.5px; margin-top: 1px; }
+nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-size: 14px; }
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a.active { color: var(--text); }
+
+.eyebrow-pill { display: inline-block; background: var(--pill-bg); color: var(--pill-text); font-size: 12.5px; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; letter-spacing: 0.3px; }
+.hero h2 { font-size: 36px; line-height: 1.22; margin: 0 0 18px; letter-spacing: -0.6px; max-width: 680px; }
+.hero p { color: var(--muted); font-size: 16.5px; max-width: 620px; }
+.cta { display: inline-block; margin-top: 24px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 600; padding: 13px 28px; border-radius: 9px; text-decoration: none; font-size: 15px; }
+.cta:hover { opacity: 0.92; }
+
+.section-title { display: flex; align-items: center; gap: 10px; margin: 60px 0 4px; }
+.section-title .dot { width: 26px; height: 26px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.section-title h3 { font-size: 21px; margin: 0; letter-spacing: -0.3px; }
+.section-sub { color: var(--muted); font-size: 14.5px; margin: 6px 0 24px; }
+
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.icon-badge { width: 30px; height: 30px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; color: #fff; }
+.card h4 { font-size: 14.5px; margin: 0; }
+.card p { color: var(--muted); font-size: 13.5px; margin: 0; }
+
+.highlight-box { margin-top: 14px; border: 1px solid var(--border); background: var(--bg-card-alt); border-radius: 10px; padding: 12px 14px; font-size: 13.5px; color: var(--muted); }
+.highlight-box strong { color: var(--green); }
+
+.service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-bottom: 16px; }
+.service-card .card-head { margin-bottom: 12px; }
+.service-card h3 { font-size: 17px; margin: 0; }
+.service-card p.desc { color: var(--muted); font-size: 14.5px; margin: 0 0 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { background: var(--pill-bg); color: var(--pill-text); font-size: 12.5px; padding: 6px 12px; border-radius: 999px; }
+.status { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 12.5px; color: var(--green); }
+
+footer { margin-top: 80px; color: #4d5568; font-size: 13px; border-top: 1px solid var(--border); padding-top: 24px; }
+
+@media (max-width: 640px) {
+  .grid3 { grid-template-columns: 1fr; }
+  .grid2 { grid-template-columns: 1fr; }
+  .hero h2 { font-size: 27px; }
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>Shabananafeesa</h1>
+  <div class="brand">
+    <div class="logo-badge">S</div>
+    <div>
+      <h1>Shabananafeesa</h1>
+      <div class="tag">SEO & GEO Consultant, India</div>
+    </div>
+  </div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <a href="services.html" class="active">Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<h2>Services</h2>
-<p>Every engagement starts with an audit — I don't sell a fixed package until I know what your site actually needs.</p>
-
-<div class="service">
-  <h3>Technical SEO</h3>
-  <p>Full site audits, crawlability and indexing fixes, structured data (schema markup), Core Web Vitals, and the technical foundation everything else depends on.</p>
+<span class="eyebrow-pill">What's Included</span>
+<div class="hero">
+  <h2 style="font-size:30px;">Services</h2>
+  <p>Every engagement starts with an audit. I don't sell a fixed package until I know what your site actually needs.</p>
 </div>
 
-<div class="service">
-  <h3>Content Strategy</h3>
-  <p>Keyword and topic research grounded in real GCC search behavior, content architecture, and roadmaps that compound over time instead of chasing one-off rankings.</p>
+<div class="service-card">
+  <div class="card-head">
+    <div class="icon-badge" style="background:#3b82f6;">T</div>
+    <h3>Technical SEO</h3>
+  </div>
+  <p class="desc">Full site audits, crawlability and indexing fixes, structured data (schema markup), Core Web Vitals, and the technical foundation everything else depends on.</p>
+  <div class="tags">
+    <span class="pill">Site Audits</span>
+    <span class="pill">Schema Markup</span>
+    <span class="pill">Core Web Vitals</span>
+    <span class="pill">Indexing Fixes</span>
+  </div>
+  <div class="status">✓ Foundation for every other service</div>
 </div>
 
-<div class="service">
-  <h3>Google Business Profile & Local SEO</h3>
-  <p>Local search visibility and GBP management for multi-location businesses across the UAE and Saudi Arabia, including Google Merchant Center setup.</p>
+<div class="service-card">
+  <div class="card-head">
+    <div class="icon-badge" style="background:#22c55e;">C</div>
+    <h3>Content Strategy</h3>
+  </div>
+  <p class="desc">Keyword and topic research grounded in real search behavior, content architecture, and roadmaps that compound over time instead of chasing one-off rankings.</p>
+  <div class="tags">
+    <span class="pill">Keyword Research</span>
+    <span class="pill">Topic Clusters</span>
+    <span class="pill">Content Roadmaps</span>
+  </div>
+  <div class="status">✓ Built for long-term compounding growth</div>
 </div>
 
-<div class="service">
-  <h3>GEO / AI Search Optimization</h3>
-  <p>Structuring your site's content and data so your brand shows up correctly in AI-powered search and answer engines — not just traditional blue-link results.</p>
+<div class="service-card">
+  <div class="card-head">
+    <div class="icon-badge" style="background:#f59e0b;">L</div>
+    <h3>Google Business Profile & Local SEO</h3>
+  </div>
+  <p class="desc">Local search visibility and GBP management for multi-location and service-area businesses, including Google Merchant Center setup.</p>
+  <div class="tags">
+    <span class="pill">GBP Optimization</span>
+    <span class="pill">Merchant Center</span>
+    <span class="pill">Multi-Location</span>
+  </div>
+  <div class="status">✓ Ideal for local and regional businesses</div>
+</div>
+
+<div class="service-card">
+  <div class="card-head">
+    <div class="icon-badge" style="background:#a855f7;">A</div>
+    <h3>GEO / AI Search Optimization</h3>
+  </div>
+  <p class="desc">Structuring your site's content and data so your brand shows up correctly in AI-powered search and answer engines, not just traditional blue-link results.</p>
+  <div class="tags">
+    <span class="pill">AI Search Visibility</span>
+    <span class="pill">Structured Data</span>
+    <span class="pill">Answer Engines</span>
+  </div>
+  <div class="status">✓ Positioning for where search is heading</div>
 </div>
 
 <footer>
